@@ -34,19 +34,24 @@ def has_symbols(password):
     return rate
 
 
-cheks = [
-        has_digit,
-        is_very_long,
-        has_upper_letters,
-        has_lower_letters,
-        has_symbols
+def main():
+    cheks = [
+            has_digit,
+            is_very_long,
+            has_upper_letters,
+            has_lower_letters,
+            has_symbols
     ]
 
-password = input('Введите пароль: ')
-password_rate = 0
+    password = input('Введите пароль: ')
+    password_rate = 0
 
-for func in cheks:
-    result = func(password)
-    password_rate += result
+    for func in cheks:
+        result = func(password)
+        password_rate += result
 
-print('Рейтинг пароля: ' + str(password_rate))
+    print('Рейтинг пароля: ' + str(password_rate))
+
+
+if __name__ == '__main__':
+    main()
