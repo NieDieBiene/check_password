@@ -20,18 +20,18 @@ def has_symbols(password):
 
 
 def main():
-    cheks = [
-            has_digit,
-            is_very_long,
-            has_upper_letters,
-            has_lower_letters,
-            has_symbols
+    checks = [
+        has_digit,
+        is_very_long,
+        has_upper_letters,
+        has_lower_letters,
+        has_symbols
     ]
 
     password = input('Введите пароль: ')
     password_rate = 0
 
-    for func in cheks:
+    for func in checks:
         password_rate += 2 if func(password) else 0
 
     print('Рейтинг пароля: ' + str(password_rate))
